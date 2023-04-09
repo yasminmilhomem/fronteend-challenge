@@ -1,38 +1,68 @@
-.App {
+body {
+  background-color: var(--cor-secundaria);
+  margin: auto;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.container {
+  height: 100vh;
+  width: 70vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container h1 {
+  color: var(--cor-primaria);
+  font-style: italic;
+  font-weight: 100;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container .inputGroup {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+  height: 8%;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.container .inputGroup input {
+  background: none;
+	color: inherit;
+	border: 0.1rem;
+	padding: 0;
+	font-family: inherit;
+	outline: inherit;
+  border-style: solid;
+  border-color: var(--cor-primaria);
+  border-radius: 0.3rem;
+  width: 90%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.container .inputGroup input::placeholder {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.container .inputGroup button {
+  width: 7rem;
+  background-color: var(--cor-primaria);
+  border-radius: 0.3rem;
+	color: var(--cor-secundaria);
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  height: 100%;
+  font-style: italic;
+  font-size: 1.3rem;
 }

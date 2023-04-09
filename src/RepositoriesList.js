@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import './App.css';
-import { Search } from 'react-bootstrap-icons';
+import React, { useState, useEffect } from 'react';
 
-
-export function App() {
+function RepositoriesList() {
   const [username, setUsername] = useState('');
-  const [repositories] = useState([]);
+  const [repositories, setRepositories] = useState([]);
 
   const handleInputChange = event => {
     setUsername(event.target.value);
@@ -25,12 +22,12 @@ export function App() {
   
 
   return (
-    <body>
-    <div className='container'>
-      <h1>Search Devs</h1>
-      <div className='inputGroup'>
-        <input type="text" placeholder='Type the username here...' id="username-input" value={username} onChange={handleInputChange} />
-        <button onClick={handleButtonClick}><Search style={{background: 'none'}}/>Buscar</button>
+    <div>
+      <h1>GitHub Repositories</h1>
+      <div>
+        <label htmlFor="username-input">Enter a GitHub username:</label>
+        <input type="text" id="username-input" value={username} onChange={handleInputChange} />
+        <button onClick={handleButtonClick}>Search</button>
       </div>
       <ul>
         {repositories.map(repo => (
@@ -38,7 +35,7 @@ export function App() {
         ))}
       </ul>
     </div>
-    </body>
   );
 }
 
+export default RepositoriesList;
