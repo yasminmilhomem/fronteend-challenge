@@ -17,11 +17,11 @@ export function App() {
       .then(data => {
         const sortedRepos = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
         const repoList = sortedRepos.map(repo => `${repo.name} - ${repo.stargazers_count} stars`).join('\n');
-        const newWindow = window.open('', '_blank');
-        newWindow.document.write(`<pre>${repoList}</pre>`);
+        document.body.innerHTML = `<pre>${repoList}</pre>`;
       })
       .catch(error => console.log(error));
   };
+  
   
 
   return (
