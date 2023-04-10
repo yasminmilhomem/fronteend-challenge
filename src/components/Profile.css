@@ -1,36 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-    --cor-primaria: #47525e;
+    font-family: 'Nunito', sans-serif;
+    --cor-primaria: #3B4252;
     --cor-secundaria: #fafafa;
+    --cor-terciaria: #8491a7;
   }
 
 .loadedClass {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
     display: flex;
     flex-direction: row;
+    padding: 2%
 }
 
 .loadedClass .leftBar {
+    display: flex;
+    flex-direction: column;
     background-color: var(--cor-primaria);
-    width: 35%;
+    width: 25%;
+    color: var(--cor-secundaria);
 }
 
 .loadedClass .leftBar img {
     width: 20rem;
-
+    margin: 0 auto;
 }
 
 .loadedClass .leftBar .nameGroup {
-
+    font-style: italic;
 }
 
-.loadedClass .leftBar .nameGroup h1 {
-    font-weight: 300;
-    color: var(--cor-secundaria);
+.loadedClass .leftBar .nameGroup h2,h3 {
+    line-height: 1.8rem;
+    font-weight: 200;
 }
 
-.loadedClass .leftBar .nameGroup h1 {
 
+.loadedClass .leftBar p {
+    font-size: 0.85rem;
+    color: var(--cor-terciaria);
 }
+
+
+.loadedClass .leftBar .numbersGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+
 .loadedClass .rightBar {
     width: 65%;
+}
+
+.loadedClass .rightBar {
+    width: 75%;
+    background-color: var(--cor-secundaria);
 }
