@@ -1,33 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from './App';
-import './index.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Home } from './Home';
-import Profile from './Profile';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Profile from './components/Profile';
 
-
-const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <App />,
-      children: [
-        {
-        path: "/",
-        element: <Home />
-        },
-        {
-        path: "profile",
-        element: <Profile />
-        },
-      ],
-    },
-  ]);
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <>
-    <RouterProvider router={router}/>
-    <App />
-    </>
+ReactDOM.render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/profile/:username" element={<Profile />} />
+    </Routes>
+  </BrowserRouter>,
+  document.getElementById('root')
 );

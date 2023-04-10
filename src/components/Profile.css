@@ -1,0 +1,36 @@
+:root {
+    --cor-primaria: #47525e;
+    --cor-secundaria: #fafafa;
+  }
+
+.loadedClass {
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: row;
+}
+
+.loadedClass .leftBar {
+    background-color: var(--cor-primaria);
+    width: 35%;
+}
+
+.loadedClass .leftBar img {
+    width: 20rem;
+
+}
+
+.loadedClass .leftBar .nameGroup {
+
+}
+
+.loadedClass .leftBar .nameGroup h1 {
+    font-weight: 300;
+    color: var(--cor-secundaria);
+}
+
+.loadedClass .leftBar .nameGroup h1 {
+
+}
+.loadedClass .rightBar {
+    width: 65%;
+}

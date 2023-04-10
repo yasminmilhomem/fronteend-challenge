@@ -1,0 +1,80 @@
+:root {
+    --cor-primaria: #47525e;
+    --cor-secundaria: #fafafa;
+  }
+
+body {
+    background-color: var(--cor-secundaria);
+    margin: auto;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+.container {
+    height: 100vh;
+    width: 70vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.container h1 {
+    color: var(--cor-primaria);
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+  }
+  
+.container .inputGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    height: 8%;
+    width: 100%;
+  }
+  
+.container .inputGroup input {
+    background: none;
+      color: inherit;
+      border: 0.1rem;
+      padding: 0;
+      font-family: inherit;
+      outline: inherit;
+    border-style: solid;
+    border-color: var(--cor-primaria);
+    border-radius: 0.3rem;
+    width: 90%;
+    height: 100%;
+  }
+  
+  
+.container .inputGroup input::placeholder {
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  
+.container .inputGroup button {
+    width: 7rem;
+    background-color: var(--cor-primaria);
+    border-radius: 0.3rem;
+    color: var(--cor-secundaria);
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    height: 100%;
+    font-style: italic;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: unset;
+  }
+
+.container .inputGroup button:hover {
+    opacity: 85%;
+    transition: 0.5s;
+}

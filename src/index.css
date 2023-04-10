@@ -3,7 +3,6 @@
   --cor-secundaria: #fafafa;
 }
 
-
 * {
   background-color: var(--cor-secundaria);
   font-family: 'Nunito Sans', sans-serif;
